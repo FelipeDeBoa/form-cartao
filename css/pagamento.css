@@ -1,28 +1,36 @@
-body {
-  font-family: 'Bariol', sans-serif;
-  background-color: #BBBBBB;
+.cards {
+  position: relative;
+  height: 220px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  
+}
+
+.card-body {
+  background-color:#001a5f;
+  border: 1px solid #666666;
+  border-radius: 8px;
+  color: #DAA520;
+  position: absolute;
+  width: 95%;
+  height: 109%;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+}
+
+article > label{
+  color:#fff;
+}
+
+#card_verso {
+  transform: rotateY(180deg);
 }
 
 .formulario {
   border: 1px solid #666666;
-  text-align: center;
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  box-shadow: 5px 5px 20px 5px #444444;
-  padding: 10px 0;
-}
-
-article {
-  border: 1px solid #666666;  
-  border-radius: 20px;
-  background-color: #FFFFFF;
-  box-shadow: 5px 5px 20px 5px #444444;
-  padding: 10px 0;
-}
-
-hr {
-  width: 100%;
-  border: 1px solid #CCCCCC;
+  border-radius: 8px;
+  background-color: #FFF;  
+  padding: 16px 4;
 }
 
 form {
@@ -30,47 +38,7 @@ form {
   padding: 0 40px;
 }
 
-input, select {
-  background-color: #FFFFFF;
-  border: 1px solid #CCCCCC;
-  height: 40px;
-  font-size: 1.2rem;
-}
-
-input {
+.barra {
   width: 100%;
-}
-
-button {
-  width: 100%;
-  height: 40px;
-  font-size: 1.4rem;
-}
-
-
-
-button:hover {
-  background-color: #000 ;
-  color: #FFFFFF;
-}
-
-.cards {
-  position: relative;
-  height: 240px;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-
-
-.card-body {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
-}
-
-#card_verso {
-  transform: rotateY(180deg);
+  border: 15px solid #111;
 }

@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,74 +12,88 @@
 <link rel="stylesheet" href="css\pagamento.css">
 </head>
 <body>
-  <section class="row container mt-5">
+  <section class="row container  mt-4">
     <div class="col-md-6 cards" id="lado-esquerdo">
-    <article stylet="min-height: 300px;" id="card_frente" class="card card-body">
-      <p class='text-end'>Frente</p>
-      <label fo="card_number">Número</label>
-      <span id="card_number" class="h4">0000 0000 0000 0000</span>
+<!--FRENTE-->
+      <article stylet="min-height: 200px;" id="card_frente" class="card card-body">
+        <p class='text-end text-white'>Frente</p>
+        <label fo="card_number">Número:</label>
+        <span  id="card_number" class="h4">0000 0000 0000 0000</span>
 
-      <label>Titular</label>
-      <span id="card_name" class="h4">FCO CHIQUIM SILVA</span>
+        <label>Titular:</label>
+        <span id="card_name" class="h4">FCO CHIQUIM SILVA</span>
 
-      <label>Validade</label>
-      <span id="card_date" class="h4">MM/YY</span>
-    </article>
+        <label>Validade:</label>
+        <span  id="card_date" class="h4">
+          MM/YY
+          <i class=" ">#</i>
+        </span>
 
-    <article stylet="min-height: 300px;" id="card_verso" class="card card-body">
-      <p class='text-end'>Verso</p>
-      <label>Código de Segurança</label>
-      <span id="card_cvv" class="h4">000</span>
-    </article>
+        
+
+      </article>
+<!--VERSO-->
+      <article stylet="min-height: 200px;" id="card_verso" class="card card-body">
+        <p class='text-end text-white'>Verso</p>
+        <label>Código de Segurança:</label>
+        <span  id="card_cvv" class="h4">000</span>
+        <hr class="barra">      
+
+      </article>
     </div>
-
-    <div class="col-md-6">
+<!--FORMULÁRIO-->
+    <div class="col-md-6 cards mt-8">
       <div class="formulario">
-        <h1>Pagamento</h1>
+        <p class="h1 text-center text-secondary">Dados do Cartão:</p>
         <hr>
-        <form action="">
-          <label for="numero">Número do cartão</label>
-          <input
-            type="text"
-            id="numero"
-            pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
-            placeholder="Ex: 1234 1234 1234 1234"
-            required
-          >       
-          <label for="codigo">Código de segurança do cartão</label>
-          <input
-            type="text"
-            id="codigo"
-            pattern="[0-9]{3}"
-            placeholder="Ex: 123"
-            required
-          >        
-          <label for="mes">Data de validade</label>          
-          <select id="mes" data-action="date">
-            <option selected disabled>Mês</option>
-            <option value="01">Janeiro</option>
-            <option value="02">Fevereiro</option>
-            <option value="03">Março</option>
-          </select>
-          <select id="ano" data-action="date">
-            <option selected disabled>Ano</option>
-            <option>2021</option>
-            <option>2022</option>
-            <option>2023</option>
-          </select>         
-      
-          <label for="nome">Nome do titula</label>
-          <input type="text" id="nome" required>      
-          <label for="cpf">CPF do titular do cartão</label><br>  
-          <input
-            type="text"
-            id="cpf"
-            pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
-            placeholder="Ex: 123.123.123-12"
-            required
-          >       
-                          
-        <button>Enviar</button>
+        <form class="form-label" action="">
+          <div class="col-auto">
+              <label for="numero">Número do cartão:</label>
+              <input class="form-control"
+                type="text"
+                id="numero"
+                pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}"
+                placeholder="Ex: 1234 1234 1234 1234"
+                required
+              >       
+              <label for="codigo">Código de segurança do cartão:</label>
+              <input class="form-control"
+                type="text"
+                id="codigo"
+                pattern="[0-9]{3}"
+                placeholder="Ex: 123"
+                required
+              >        
+              <label for="mes">Data de validade:</label>          
+              <select class="form-select" aria-label="Default select example" id="mes" data-action="date">
+                <option selected disabled>Mês</option>
+                <option value="01">Janeiro</option>
+                <option value="02">Fevereiro</option>
+                <option value="03">Março</option>
+              </select>
+              <select class="form-select" aria-label="Default select example"  id="ano" data-action="date">
+                <option selected disabled>Ano</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+              </select>         
+          
+              <label  for="nome">Nome do titular do cartão:</label>
+              <input class="form-control" type="text" id="nome" required>      
+              <label for="cpf">CPF do titular do cartão:</label><br>  
+              <input class="form-control"
+                type="text"
+                id="cpf" 
+                pattern="[0-9]{3}.[0-9]{3}.[0-9]{3}-[0-9]{2}"
+                placeholder="Ex: 123.123.123-12"
+                required
+              >       
+            <br>                 
+            <button class="btn btn-success">Enviar</button>
+            <br>
+            <br>
+            <br>
+          </div>
         </form>
         </div>
     </div>

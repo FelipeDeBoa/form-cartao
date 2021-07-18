@@ -8,6 +8,11 @@ document.getElementById('nome').addEventListener('keyup', function () {
     document.getElementById('card_name').innerHTML = nome;
 });
 
+document.getElementById('codigo').addEventListener('keyup', function () {
+    let codigo = document.getElementById('codigo').value;
+    document.getElementById('card_cvv').innerHTML = codigo;
+});
+
 //document.getElementById('mes').addEventListener('change', function () {
 //    let mes = document.getElementById('mes').value;
 //   let ano = document.getElementById('ano').value;
@@ -38,3 +43,4 @@ document.getElementById('codigo').addEventListener('blur', function () {
     document.getElementById('lado-esquerdo').style.transform = 'rotateY(0deg)';
     
 });
+
