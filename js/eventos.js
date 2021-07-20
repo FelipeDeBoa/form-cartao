@@ -1,6 +1,8 @@
 document.getElementById('numero').addEventListener('keyup', function () {
     let numero = document.getElementById('numero').value;
     document.getElementById('card_number').innerHTML = numero;
+    
+    setIconCreditCard('cardBrand', numero)    
 });
 
 document.getElementById('nome').addEventListener('keyup', function () {

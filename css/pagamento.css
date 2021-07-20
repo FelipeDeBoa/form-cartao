@@ -42,3 +42,7 @@ form {
   width: 100%;
   border: 15px solid #111;
 }
+
+.card_number{position:relative;}
+.card_number input{padding-right: 40px;}
+.card_number span{position:absolute; top:0; right:0; height:100%; padding: 5px 10px; display: flex; align-items: center;}
