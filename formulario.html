@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Form-Cadastro de Aluno</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
@@ -12,40 +12,40 @@
 </head>
 <body>
 
-<h1>Cadastro de Aluno</h1>
+<div class="container col-md-6 cards mt-8">
+<h1 class="h1 text-center">Cadastro de Aluno</h1>
 
-<form action="">
+<form class="card" action="">
 
-  <fieldset>
+  <fieldset >
     <legend><strong>Dados Pessoais</strong></legend>
 
-    <label for="nome">Qual o seu nome?</label>
-    <br>
-    <input id="nome" placeholder="Digite o nome completo" type="text" required>
-    <br><br>
-
+    <label for="nome">Qual o seu nome?</label>    
+    <input class="form-control" id="nome" placeholder="Digite o nome completo" type="text" required> 
     <label for="email">Qual o seu Email?</label><br>
-    <input type="email" id="email" required>
-    <br><br>
-
-    <label for="idade">Qual a sua idade?</label><br>
-    <input type="number" id="idade" min="14" max="90" required>
-    <br><br>
-
-    <label for="senha">Informe uma senha</label><br>
-    <input type="password" id="senha" minlength="8">
+    <input class="form-control" type="email" id="email" placeholder="aluno@sucesso.com" required> 
+    <label for="idade">Qual a sua idade </label>
+    <input class="form-control" type="number" id="idade" min="14" max="90" required>	
+	<fieldset>
+		<legend><strong>Dados de Login ( Painel do Aluno )</strong></legend>
+		<label for="login">Login de acesso:</label><br>
+		<input class="form-control" type="text" id="login" placeholder="Login"><br>
+		
+		<label for="senha">Senha de acesso:</label><br>
+		<input class="form-control" type="password" placeholder="Password" id="senha" minlength="8">		
+	</fieldset>
   </fieldset>
 
   <br>
   <fieldset>
-    <legend>Dados do Curso</legend>
+    <legend><strong>Dados do Curso</strong></legend>
 
     <label for="data">Qual a data que vc iniciará o curso?</label><br>
-    <input type="date" id="data">
+    <input class="form-control" type="date" id="data">
     <br><br>
 
     <label for="cor">Qual a cor da camiseta?</label><br>
-    <input type="color" id="cor">
+    <input class="form-control" type="color" id="cor">
     <br><br>
 
     <p>Qual turno mais lhe agrada?</p>
@@ -75,19 +75,19 @@
   <br>
 
   <fieldset>
-    <legend>Informações Adicionais</legend>
+    <legend><strong>Informações Adicionais</strong></legend>
 
     <label for="foto">Envie uma foto 3x4</label><br>
-    <input type="file" id="foto">
+    <input class="form-control" type="file" id="foto">
 
     <br><br>
 
     <label for="pesquisa">Seu nivel de satisfação?</label>
-    0
-    <input type="range">
-    5
+    
+    <input class="form-control" type="range">
+    
 
-    <input type="hidden" name="token" value="1q2w3e4r">
+    <input class="form-control" type="hidden" name="token" value="1q2w3e4r">
 
     <br><br>
     <label for="cidade">Selecione sua cidade</label><br>
@@ -114,8 +114,9 @@
 
 
   <br><br>
-  <button>Enviar</button>
+  <button class="btn btn-success">Enviar</button>
 </form>
+</div>
 </body>
 </html>
 
