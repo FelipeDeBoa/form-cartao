@@ -1,25 +1,61 @@
+/*:root {
+  --var-bg:#000000;
+  --var-bg-form:#353535;
+  --var-bg-input:#202125;
+  --var-color-text:#FFFFFF;
+  --var-color-text-card: rgb(0, 132, 255);
+}*/
+
+html[data-theme='light']{
+  --var-bg:#f5f6f7;
+  --var-bg-form:#2980b9;
+  --var-bg-input:#202125;
+  --var-color-text:#111;
+  --var-color-text-card: #f1c40f;
+}
+
+html[data-theme='dark']{
+  --var-bg:#131419;
+  --var-bg-form:#353535;
+  --var-bg-input:#202125;
+  --var-color-text:#FFFFFF;
+  --var-color-text-card: rgb(0, 132, 255);
+}
+
+input{
+  background-color:var(--var-bg-input);
+}
+
 .cards {
   position: relative;
   height: 220px;
   transition: transform 0.6s;
   transform-style: preserve-3d;
-  
+}
+
+.bg {
+  background-color:var(--var-bg);
+  /*background-image: url("images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;*/
 }
 
 .card-body {
-  background-color:#001a5f;
-  border: 1px solid #666666;
+  background-color:var(--var-bg-form);
+  border: 2px solid var(--var-color-text);
   border-radius: 8px;
-  color: #DAA520;
+  color: var(--var-color-text-card);
   position: absolute;
-  width: 95%;
-  height: 109%;
-  backface-visibility:hidden;
-  -webkit-backface-visibility:hidden;
+  width: 80%;
+  height: auto;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
-article > label{
-  color:#fff;
+article > label {
+  color: #fff;
 }
 
 #card_verso {
@@ -27,9 +63,10 @@ article > label{
 }
 
 .formulario {
-  border: 1px solid #666666;
+  border: 1px solid var(--var-color-text);
   border-radius: 8px;
-  background-color: #FFF;  
+  background-color:var(--var-bg-form);
+  color:var(--var-color-text);
   padding: 16px 4;
 }
 
@@ -43,6 +80,7 @@ form {
   border: 15px solid #111;
 }
 
-.card_number{position:relative;}
-.card_number input{padding-right: 40px;}
-.card_number span{position:absolute; top:0; right:0; height:100%; padding: 5px 10px; display: flex; align-items: center;}
+button {
+  width: 100%;
+  margin-bottom: 25px;
+}
